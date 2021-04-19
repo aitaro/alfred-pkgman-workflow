@@ -22,7 +22,7 @@ class Pub extends Repo
             $this->id,
             $query,
             "{$this->url}/api/search?q={$query}"
-        );
+        )->packages;
 
         foreach ($this->pkgs as $pkg) {
             $title = $pkg->package;
